@@ -27,3 +27,11 @@ jobs:
         run: |
           docker compose build
           docker compose push
+
+      - name: Verify image exists in GHCR
+        run: |
+          # Encode token for API access
+          ENCODED_TOKEN=$(echo -n "${{ secrets.GITHUB_TOKEN }}" | base64)
+          # Query the tags list for your image
+          curl -s -H "Authorization: Bearer ${ENCODED_TOKEN}" \
+          https://ghcr.io/v2/${{ github.repository }}/IMAGE_NAME/tags/list
