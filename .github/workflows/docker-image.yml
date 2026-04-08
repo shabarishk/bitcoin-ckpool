@@ -34,4 +34,4 @@ jobs:
           ENCODED_TOKEN=$(echo -n "${{ secrets.GITHUB_TOKEN }}" | base64)
           # Query the tags list for your image
           curl -s -H "Authorization: Bearer ${ENCODED_TOKEN}" \
-          https://ghcr.io/v2/${{ github.repository }}/IMAGE_NAME/tags/list
+          https://ghcr.io/v2/${{ github.repository }}/tags/list
