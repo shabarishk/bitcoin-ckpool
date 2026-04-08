@@ -1,8 +1,8 @@
 services:
   bitcoin-ckpool:
+    image: ghcr.io/yshabarishk/bitcoin-ckpool/app:latest
     build:
       context: ckpool/
-      image: ghcr.io/yshabarishk/bitcoin-ckpool/app:latest
       # For x86_64 builds:
       args:
         TARGETARCH: amd64
