@@ -1,6 +1,6 @@
 services:
   bitcoin-ckpool:
-    image: ghcr.io/yshabarishk/bitcoin-ckpool/app:latest
+    image: ghcr.io/shabarishk/bitcoin-ckpool/app:latest
     build:
       context: ckpool/
       # For x86_64 builds:
